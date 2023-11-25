@@ -1,0 +1,450 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "montserrat";
+    color: #fff;
+}
+html,body{
+    width: 100%;
+    perspective: 800px;
+    height: 100%;   
+}
+
+#nav{
+    position: fixed !important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* background-color: red; */
+    gap: 30px;
+    padding: 10px 100px;
+    height: 100px;
+    width: 100%;
+    z-index: 99;
+}
+#cursor{
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    background-color: #95c11e;
+    position: fixed;
+    z-index: 99;
+}
+
+#cursor-blur{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;background-color: #96c11e83;
+    position: fixed;
+    z-index: 9;
+    filter: blur(80px);
+}
+#page1 #arrow{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    bottom: 0;
+    left: -2%;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #95c11e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.4s;
+    z-index: 999;
+}
+#page1 #arrow i{
+    font-size: 40px;
+    font-weight: 100;
+}
+#page1 #arrow:hover{
+    scale: 0.4;
+    background-color: #95c11e;
+}
+#nav img{
+    height: 50px;
+}
+#nav h4{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+video{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed !important;
+    z-index: -1;
+}
+#main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.37);
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+#page1 h1{
+    text-transform: uppercase;
+    font-size: 90px;
+    font-weight: 900;
+    position: relative;
+}
+#page1 h1::before{
+    content: "eat. drink. play";
+    position: absolute;
+    color: #000;
+    top: -4px;
+    left: -4px;
+    z-index: -1;
+    -webkit-text-stroke: 1px #95c11e;
+}
+#page1 h2{
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#page1 p{
+    font-size: 16px;
+    font-weight: 300;
+    width: 40%;
+}
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    /* z-index: 10; */
+}
+#scroller{
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 50s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+#scroller-in h4{
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 120px;
+    font-weight: 900;
+    font-family: sans-serif;
+    margin-right: 40px;
+    cursor: pointer;
+    color: #000;
+    transition: all linear 0.5s;
+    -webkit-text-stroke: 2px #95c11e;
+    color: transparent;
+}
+#scroller-in h4:hover{
+    color: #95c11e;
+}
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
+#about-us{
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 50px;
+    position: relative;
+    z-index: 10;
+}
+#about-us img{
+    height: 220px;
+    width: 220px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+#about-in{
+    width: 50%;
+    text-align: center;
+}
+#about-in h3{
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+#about-in p{
+    line-height: 20px;
+    font-size: 15px;
+}
+#card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    /* background-color: red; */
+}
+.card{
+    background-color: blue;
+    height: 80%;
+    width: 27%;
+    border-radius: 20px;
+    background-position: center;
+    background-size: cover;
+    z-index: 9;
+    overflow: hidden;
+    transition: all ease 0.6s;
+    position: relative;
+}
+#card1{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+    opacity: .95;
+}
+#card2{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4-1024x1024.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+    opacity: .95;
+}
+#card3{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+    opacity: .95;
+}
+.card .overlay{
+    background-color: #95c11e;
+    padding: 25px;
+    height: 100%;
+    transition: all ease 0.6s;
+    width: 100%;
+    opacity: 0;
+}
+/* .card h4{
+    font-size: 30px;
+    font-weight: 900;
+    padding: 40px;
+    height: 100%;
+    margin-top: 110%;
+
+} */
+.overlay h4{
+    margin-top: 50px;
+    color: #000;
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 20px;
+
+}
+.overlay p{
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+.card:hover .overlay{
+    opacity: 1;
+}
+.card:hover {
+    transform: rotate3d(1, 1, 0, 20deg);
+}
+#green-div{
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to left top, #0d9132, #ace022);
+}
+#green-div h4{
+    color: #000;
+    font-size: 23px;
+    font-weight: 900;
+    width: 40%;
+    text-align: center;
+    line-height: 2;
+}
+#green-div img{
+    height: 100%;
+}
+
+#green-div .img2{
+    transform: rotate(180deg);
+}
+#page3{
+    width: 100%;
+    height: 60vh;
+    background-color: #000;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+#page3>p{
+    width: 55%;
+    text-align: center;
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 1.5;
+    text-transform: uppercase   ;
+}
+#page3 img{
+    position: absolute;
+    height: 45px;
+}
+#page3 #colon1{
+    top: 30%;
+    left: 15%;
+}
+#page3 #colon2{
+    bottom: 30%;
+    right: 15%;
+}
+#page4{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+}
+.elem{
+    width: 25%;
+    height: 60%;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+}
+.elem h2{
+    height: 100%;
+    width: 100%;
+    background-color: #95c11e;
+    display: flex;
+    align-items: center;
+    color: #000;
+    justify-content: center;
+    font-size: 23px;
+    transition: all ease 0.8s;
+    font-weight: 800;
+    position: absolute;
+    z-index: 10;
+}
+.elem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scale: 1.2;
+    transition: all ease 0.8s;
+}
+.elem:hover h2{
+    color: #fff;
+    background-color: transparent;
+}
+.elem:hover img{
+    scale: 1;
+}
+#page4 h1{
+    position: absolute;
+    top: 0%;
+    font-size: 65px;
+    font-weight: 900;
+    color: #000;
+    -webkit-text-stroke: 1px #fff;
+}
+#footer{
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(to left bottom, #0d9132, #ace022 );
+}
+#footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    padding: 50px 100px;
+}
+#upper{
+    display: flex;
+    /* align-items: center; */
+    margin-top: 20px;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    height: 90%;
+}
+#upper h4{
+    color: #000;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 900;
+    transition: all ease 0.2s;
+}
+#upper h4:hover{
+    color: #fff;
+}
+#upper p{
+    color: #000;
+    font-weight: 500;
+    font-size: 18px;
+}
+#lower{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+#lower h4{
+    color: #000;
+    font-weight: 400;
+    font-size: 15px;
+}
+#sec1 img{
+    height: 120px;
+    width: 120px;
+    transition: all ease 0.5s;
+}
+#sec1 img:hover{
+    scale: 0.8;
+}
+#sec1{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+#sec1 h4 i{
+    filter: invert(100%);
+    font-size: 30px;
+    transition: all ease 0.5s;
+
+}
+#sec1 h4 i:hover{
+    filter: invert(0);
+
+
+}
